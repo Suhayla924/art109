@@ -1,20 +1,21 @@
-/*declare "c"*/
-let c = '';
-
 /*testing if the console log is responding*/
-console.log("Hello World!");
+console.log("Part2!");
 
-/*create an array for the loop*/
-/* make a for statment to create the array.
-"i" equals zero. If "i" is greater then 7 then;
- means that 7 rows will print in the console log.
+/* Simillair to the first part we will make a loop that print out the numbers*/
+/* make a for statment to create the loop.
+"i" equals zero. If "i" is greater then 100 then;
+ means that 100 rows will print in the console log.
  With each row 1 is added to "i"*/
-
-for (let i = 0; i < 7; i++) {
-  c = c + '#';
-  console.log(c);
+for (let i = 0; i < 100; i++) {
+  /*if i is divsiable by 3 then it will print out Fizz.
+  the same thing applies to the other conditions with "Buzz" and "FizzBuzz"*/
+  if ((i % 3 == 0) && (i % 5 == 0)) {
+    console.log('FizzBuzz');
+  } else if (i % 5 == 0) {
+    console.log('Buzz');
+  } else if (i % 3 == 0) {
+    console.log('Fizz');
+  } else {
+    console.log(i);
+  }
 }
-
-/*After we declare the condition we make the function.
-We make "c" equal to "c" plus one hash.
-And it will repeat based on the conditions we set before.*/

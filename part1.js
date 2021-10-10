@@ -3,9 +3,10 @@ let c = '';
 
 /*testing if the console log is responding*/
 console.log("Hello World!");
+console.log("Part1!");
 
 /*create an array for the loop*/
-/* make a for statment to create the array.
+/* make a for statment to create the loop.
 "i" equals zero. If "i" is greater then 7 then;
  means that 7 rows will print in the console log.
  With each row 1 is added to "i"*/
