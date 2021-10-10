@@ -1,5 +1,5 @@
 /*declare "c"*/
-let c = '';
+let h = '';
 
 /*testing if the console log is responding*/
 console.log("Hello World!");
@@ -12,8 +12,8 @@ console.log("Part1!");
  With each row 1 is added to "i"*/
 
 for (let i = 0; i < 7; i++) {
-  c = c + '#';
-  console.log(c);
+  h = h + '#';
+  console.log(h);
 }
 
 /*After we declare the condition we make the function.
