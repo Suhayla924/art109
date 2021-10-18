@@ -28,8 +28,3 @@ for (let i = 0; i <= grid; i++) {
   }
   console.log(line);
 }
-
-function myName(){
-let s = "Suhayla Hassan"
-console.log(s);
-}
