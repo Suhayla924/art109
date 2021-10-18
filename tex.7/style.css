@@ -1,3 +1,7 @@
+.text{
+  margin: auto;
+  position: fixed;
+}
 .canvas-container1{
   margin: auto;
 }
