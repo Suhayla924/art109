@@ -3,7 +3,7 @@
   padding: 10px;
 }
 .canvas-container1{
-  margin: auto;
+  position: absolute;
   padding: 10px;
 }
 .canvas-container2{
