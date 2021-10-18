@@ -1,13 +1,13 @@
-tool.fixedDistance = 30;
+tool.fixedDistance = 50;
 
 var path;
-var strokeEnds = 6;
+var strokeEnds = 50;
 
 function onMouseDown(event) {
 	path = new Path();
 	path.fillColor = {
 		hue: Math.random() * 360,
-		saturation: 1,
+		saturation: 16,
 		brightness: 1
 	};
 }
@@ -19,8 +19,8 @@ function onMouseDrag(event) {
 	if(event.count == 0) {
 		addStrokes(event.middlePoint, event.delta * -1);
 	} else {
-		var step = event.delta / 2;
-		step.angle += 90;
+		var step = event.delta / 6;
+		step.angle += 20;
 
 		var top = event.middlePoint + step;
 		var bottom = event.middlePoint - step;
@@ -43,12 +43,12 @@ function onMouseUp(event) {
 
 function addStrokes(point, delta) {
 	var step = delta.rotate(90);
-	var strokePoints = strokeEnds * 2 + 1;
+	var strokePoints = strokeEnds * 15 + 1;
 	point -= step / 2;
 	step /= strokePoints - 1;
 	for(var i = 0; i < strokePoints; i++) {
 		var strokePoint = point + step * i;
-		var offset = delta * (Math.random() * 0.3 + 0.1);
+		var offset = delta * (Math.random() * 0.9 + 0.1);
 		if(i % 2) {
 			offset *= -1;
 		}
