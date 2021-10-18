@@ -1,11 +1,17 @@
-.text{
+.text {
   margin: auto;
   padding: 10px;
 }
-.canvas-container1{
-  position: absolute;
-  padding: 10px;
+
+.canvas-container1 {
+height: auto;
+width: auto;
 }
-.canvas-container2{
+.text2 {
+  margin: auto;
+  padding: 10px;
+  text-align: left;
+}
+.canvas-container2 {
   margin: auto;
 }
