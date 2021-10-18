@@ -4,14 +4,25 @@
 }
 
 .canvas-container1 {
-height: auto;
-width: auto;
+  margin: auto;
+  top: 100px;
+  width: 500px;
+  height: 500px;
+  border-style: outset;
+  border-color: black;
 }
+
 .text2 {
   margin: auto;
   padding: 10px;
   text-align: left;
 }
+
 .canvas-container2 {
   margin: auto;
+  top: 100px;
+  width: 500px;
+  height: 500px;
+  border-style: outset;
+  border-color: black;
 }
