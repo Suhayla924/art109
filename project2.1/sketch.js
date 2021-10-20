@@ -11,7 +11,7 @@ function setup() {
 
 function draw() {
 
-  //background(106, 142, 235, .05); // last number is transparency
+  background(106, 142, 235, .05); // last number is transparency
   strokeWeight(strokeWidth);
   noiseOffset -= 0.05;
   strokeWidth = noise(noiseOffset) * 90;
@@ -37,19 +37,19 @@ function draw() {
 
   stroke(90.5,5);
   for (let i = 1; i < width; i++) {
-    stroke(255,9,9);
-      strokeWeight(12);
-    point(i, yvals[i] /windowHeight);
+    stroke(125,9,9);
+      strokeWeight(2);
+    point(i -19, xvals[i + 9] /3);
     stroke(5,5,260);
     strokeWeight(3);
-    point(i, height / 3 + xvals[i] / 3);
-    stroke(255);
-    strokeWeight(5);
+    point(i + 6, height / 15 + yvals[i] / 3);
+    stroke(2,98,55);
+    strokeWeight(1);
     line(
       i,
-      (2 * height) / 5 + bvals[i] / 3,
+      (13 * height) / 15 + yvals[i + 15] / 3,
       i,
-      (2 * height) / 3 + yvals[i - 1] / 3
+      (12 * height) / 3 + bvals[i - 1] / 13
     );
   }
 }
