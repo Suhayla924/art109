@@ -1,0 +1,50 @@
+body{
+  background-color:#e0fff0;
+}
+h1{
+  margin: auto;
+  padding: 10px;
+  text-align: left;
+  font-family:monospace;
+  font-size: 35px;
+  color: #010048;
+}
+.text {
+  margin: auto;
+  padding: 10px;
+  text-align: left;
+  font-family:monospace;
+  font-size: 20px;
+}
+
+.canvas-container1 {
+  background-color:white;
+  margin: auto;
+  top: 100px;
+  width: 1975;
+  height: 1050;
+  border-width: 10px;
+  border-style: outset;
+  border-color: black;
+}
+
+.text2 {
+  margin: auto;
+  padding: 10px;
+  text-align: left;
+  border-width: 10px;
+  font-family:monospace;
+  font-size: 20px;
+}
+
+.canvas-container2 {
+  background-color:white;
+  align-items: center;
+  margin: auto;
+  top: 100px;
+  width: 1775;
+  height: 1050;
+  border-style: outset;
+  border-width: 10px;
+  border-color: black;
+}

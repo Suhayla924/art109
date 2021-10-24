@@ -1,0 +1,48 @@
+<!DOCTYPE html>
+<html lang="en" dir="ltr">
+
+<head>
+  <title>TE8</title>
+  <link rel="stylesheet" type="text/css" href="style.css">
+
+
+  <!-- Load the Paper.js library -->
+  <script src="https://cdnjs.cloudflare.com/ajax/libs/paper.js/0.12.15/paper-full.min.js" integrity="sha512-ovjLI1ZcZe6bw+ImQ21r+sv8q/Vwob2kq7tFidK6E1LWfi0T4uobbmpfEU1//a9h9o5Kkt+MnMWf6rWlg0EiMw==" crossorigin="anonymous"
+    referrerpolicy="no-referrer"></script>
+
+  <!-- <script src="canvas.js" type="text/javascript"></script> -->
+  <script type="text/paperscript" src="canvas1.js" canvas="myCanvas1"></script>
+  <script type="text/paperscript" src="canvas2.js" canvas="myCanvas2"></script>
+</head>
+
+<body>
+  <h1>Techincal Ex.8</h1>
+  <div class="text">
+    <p> The following example<a href="http://paperjs.org/examples/meta-balls/">"Meta-Balls"</a>,
+      shows how to create visual interactions with your mouse using an array of points.
+      Some changes I made to this example were chaning the color and size of the circles. I
+      also added more points to the array of circles and changed the distance
+       that these points were able to interract with the mouse.
+    </p>
+  </div>
+
+  <div class="canvas-container1">
+    <canvas id="myCanvas1" width="1975" height="1050"></canvas>
+  </div>
+
+  <div class="text2">
+    <p>This second example, <a href="http://paperjs.org/examples/rounded-rectangles/">
+      "Rounded Rectangles"</a> from paper.js shows how to create an array of rounded
+      rectangles that follows the mouse crusor so that it creates and
+       "optical illusion" - like pattern. I changed serveral things in this example,
+        I added a the color black to the orginal colors of red, white,and blue. I also
+        changed the size of the rounded rectangles which turned them into circles. I also
+        changed the distance between each shape in the array.
+    </p>
+  </div>
+
+  <div class="canvas-container2">
+    <canvas id="myCanvas2" width="1975" height="1000"></canvas>
+  </div>
+
+</body>
