@@ -2,20 +2,34 @@
 <html lang="en" dir="ltr">
 
 <head>
-  <title>Growing Surfaces</title>
+  <title>Growing Across Surfaces</title>
   <!-- Load the p5.js.js library -->
   <script src="https://cdnjs.cloudflare.com/ajax/libs/p5.js/1.4.0/p5.min.js" integrity="sha512-N4kV7GkNv7QR7RX9YF/olywyIgIwNvfEe2nZtfyj73HdjCUkAfOBDbcuJ/cTaN04JKRnw1YG1wnUyNKMsNgg3g==" crossorigin="anonymous" referrerpolicy="no-referrer"></script>
   <script src="sketch.js" canvas="myCanvas1"></script>
   <script src="germ.js" canvas="myCanvas1"></script>
-   <link rel="stylesheet" type="text/css" href="style.css">
+  <link rel="stylesheet" type="text/css" href="style.css">
 
 </head>
 
 <body>
-  <h1>Draw Your Own Bouquet</h1>
+  <h1>Growing Across Surfaces</h1>
   <h3></h3>
-  <h2>Flowers That Will Always Last Forever ~</h2>
-  
+  <h2>A Germ Simulator</h2>
+  <div class="row">
+    <div class="colomn" id="canvasDiv">
+
+    </div>
+    <div class="" id="controlsDiv">
+      <h3>Statement</h3>
+      <p class="pink"> With the start of the pandemic in 2020 people suddenly became more hyper-aware of the germs around them and became obsessed with keeping their surroundings clean. After looking at various examples of interactions on websites and keeping the effects of the pandemic in mind I thought that creating a website simulation that emulated the growth and spread of germs would be interesting. I used the p5.js library to create an array of “germs” that slowly moved across the screen. If the viewer clicks on a germ it will begin to multiply and the viewer can also add more germs on the screen if they press the “S” key. The view can also emulate trying  “wiping” or “cleaning” the surface if they drag across one of the germs, however, this does not fully erase the germ it only cuts it down in size to emulate how germs will always exist across surfaces no matter how well you clean. The role of the viewer represents the spread of germs, which is why I thought it was important they have the power to manipulate the germs. I would like to add more detail to this emulation in the future to make it more realistic </p>
+      <h3>Instructions</h3>
+      <ul>
+        <li>Click on the "germ" to duplicate it.</li>
+        <li>If you click the "S" key you can add a new "germ" to the canvas.</li>
+        <li>See what happens when you try to "wipe" away a "germ" by dragging your mouse across one.</li>
+        <li>Refresh the page to see a new pattern of "germs".</li>
+      </ul>
+
 
 
 </body>

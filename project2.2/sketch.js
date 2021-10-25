@@ -1,16 +1,12 @@
 //making an arry of germs
 var germs = [];
+let cnv;
 
 function setup() {
-  createCanvas(950, 1050);
+  cnv = createCanvas(1050, 1350);
+  cnv.parent("#canvasDiv");
   //"Germ" is the constructor function
   //"germ" a singular cell object
-  germs.push(new Germ());
-  germs.push(new Germ());
-  germs.push(new Germ());
-  germs.push(new Germ());
-  germs.push(new Germ());
-  germs.push(new Germ());
   germs.push(new Germ());
   germs.push(new Germ());
   germs.push(new Germ());
@@ -34,13 +30,16 @@ function draw() {
     germs[i].show();
   }
 }
+
+
 //making more circles if we click one circle
 function mousePressed() {
   console.log("clicked");
-  for (var i = 0; i < germs.length; i++) {
+  for (var i = germs.length - 1; i >= 0; i--) {
     if (germs[i].clicked(mouseX, mouseY)) {
       germs.push(germs[i].split());
       germs.push(germs[i].split());
+      germs.splice(i, 0.2);
     }
   }
 }
@@ -50,8 +49,14 @@ function mouseDragged() {
   console.log("drag");
   for (var i = 0; i < germs.length; i--) {
     if (germs[i].clicked(mouseX, mouseY)) {
-      germs.splice(i*3, 0.5);
+      germs.splice(i, .5);
     }
   }
+}
 
+//spawn a new germ
+function keyTyped() {
+  if (key === 's') {
+    germs.push(new Germ());
+  }
 }
