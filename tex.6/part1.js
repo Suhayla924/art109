@@ -1,27 +1,62 @@
-/*declare "c"*/
-let h = '';
+let bx;
+let by;
+let boxSize = 75;
+let overBox = false;
+let locked = false;
+let xOffset = 0.0;
+let yOffset = 0.0;
 
-/*testing if the console log is responding*/
-console.log("Hello World!");
-console.log("Part1!");
-
-/*create an array for the loop*/
-/* make a for statment to create the loop.
-"i" equals zero. If "i" is greater then 7 then;
- means that 7 rows will print in the console log.
- With each row 1 is added to "i"*/
-
-for (let i = 0; i < 7; i++) {
-  h = h + '#';
-  console.log(h);
+function setup() {
+  createCanvas(720, 400);
+  bx = width / 2.0;
+  by = height / 2.0;
+  rectMode(RADIUS);
+  strokeWeight(2);
 }
 
-function myName(){
-  return 'Suhayla Hassan';
+function draw() {
+  background(237, 34, 93);
+
+  // Test if the cursor is over the box
+  if (
+    mouseX > bx - boxSize &&
+    mouseX < bx + boxSize &&
+    mouseY > by - boxSize &&
+    mouseY < by + boxSize
+  ) {
+    overBox = true;
+    if (!locked) {
+      stroke(255);
+      fill(244, 122, 158);
+    }
+  } else {
+    stroke(156, 39, 176);
+    fill(244, 122, 158);
+    overBox = false;
+  }
+
+  // Draw the box
+  rect(bx, by, boxSize, boxSize);
 }
-console.log(myName());
 
+function mousePressed() {
+  if (overBox) {
+    locked = true;
+    fill(255, 255, 255);
+  } else {
+    locked = false;
+  }
+  xOffset = mouseX - bx;
+  yOffset = mouseY - by;
+}
 
-/*After we declare the condition we make the function.
-We make "c" equal to "c" plus one hash.
-And it will repeat based on the conditions we set before.*/
+function mouseDragged() {
+  if (locked) {
+    bx = mouseX - xOffset;
+    by = mouseY - yOffset;
+  }
+}
+
+function mouseReleased() {
+  locked = false;
+}
