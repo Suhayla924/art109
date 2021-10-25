@@ -39,7 +39,7 @@ function mousePressed() {
     if (germs[i].clicked(mouseX, mouseY)) {
       germs.push(germs[i].split());
       germs.push(germs[i].split());
-      germs.splice(i, 0.2);
+      germs.splice(i, 0.5);
     }
   }
 }
@@ -47,9 +47,10 @@ function mousePressed() {
 //to mimic the wiping away of germs
 function mouseDragged() {
   console.log("drag");
-  for (var i = 0; i < germs.length; i--) {
+  for (var i = 0; i < germs.length; i++) {
     if (germs[i].clicked(mouseX, mouseY)) {
-      germs.splice(i, .5);
+      germs.push(germs[i].split());
+      germs.splice(i, 1);
     }
   }
 }
