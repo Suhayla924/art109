@@ -1,62 +1,57 @@
-let bx;
-let by;
-let boxSize = 75;
-let overBox = false;
-let locked = false;
-let xOffset = 0.0;
-let yOffset = 0.0;
+//making an arry of germs
+var germs = [];
 
 function setup() {
-  createCanvas(720, 400);
-  bx = width / 2.0;
-  by = height / 2.0;
-  rectMode(RADIUS);
-  strokeWeight(2);
+  createCanvas(750, 700);
+  //"Germ" is the constructor function
+  //"germ" a singular cell object
+  germs.push(new Germ());
+  germs.push(new Germ());
+  germs.push(new Germ());
+  germs.push(new Germ());
+  germs.push(new Germ());
+  germs.push(new Germ());
+  germs.push(new Germ());
+  germs.push(new Germ());
+  germs.push(new Germ());
+  germs.push(new Germ());
+  germs.push(new Germ());
+  germs.push(new Germ());
+  germs.push(new Germ());
+  germs.push(new Germ());
+  germs.push(new Germ());
+  germs.push(new Germ());
+  germs.push(new Germ());
+  germs.push(new Germ());
+  germs.push(new Germ());
+  germs.push(new Germ());
 }
 
 function draw() {
-  background(237, 34, 93);
-
-  // Test if the cursor is over the box
-  if (
-    mouseX > bx - boxSize &&
-    mouseX < bx + boxSize &&
-    mouseY > by - boxSize &&
-    mouseY < by + boxSize
-  ) {
-    overBox = true;
-    if (!locked) {
-      stroke(255);
-      fill(244, 122, 158);
-    }
-  } else {
-    stroke(156, 39, 176);
-    fill(244, 122, 158);
-    overBox = false;
+  background(51);
+  for (var i = 0; i < germs.length; i++) {
+    germs[i].move();
+    germs[i].show();
   }
-
-  // Draw the box
-  rect(bx, by, boxSize, boxSize);
 }
-
+//making more circles if we click one circle
 function mousePressed() {
-  if (overBox) {
-    locked = true;
-    fill(255, 255, 255);
-  } else {
-    locked = false;
+  console.log("clicked");
+  for (var i = 0; i < germs.length; i++) {
+    if (germs[i].clicked(mouseX, mouseY)) {
+      germs.push(germs[i].split());
+      germs.push(germs[i].split());
+    }
   }
-  xOffset = mouseX - bx;
-  yOffset = mouseY - by;
 }
 
+//to mimic the wiping away of germs
 function mouseDragged() {
-  if (locked) {
-    bx = mouseX - xOffset;
-    by = mouseY - yOffset;
+  console.log("drag");
+  for (var i = 0; i < germs.length; i--) {
+    if (germs[i].clicked(mouseX, mouseY)) {
+      germs.splice(i*3, 0.5);
+    }
   }
-}
 
-function mouseReleased() {
-  locked = false;
 }

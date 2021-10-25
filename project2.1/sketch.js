@@ -25,15 +25,17 @@ function draw() {
     bvals[width - 15] = 255;
   }
 
-
   fill(25);
   stroke(90.5,5);
-  rect(0, height / 5, width, height /9 + 1);
-
+  //rect(0, height / 5, width, height /9 + 1);
+  function mouseIsPressed(){
+    start.mouseLine();
+  }
+function mouseLine(){
   for (let i = 1; i < width; i++) {
     stroke(255,9,9);
-      strokeWeight(12);
-    point(i, yvals[i] / 9);
+      strokeWeight(6);
+    point(i%4, yvals[i] / 9);
     stroke(5,5,260);
     strokeWeight(3);
     point(i, height / 3 + xvals[i] / 3);
@@ -46,4 +48,5 @@ function draw() {
       (2 * height) / 3 + yvals[i - 1] / 3
     );
   }
+}
 }
