@@ -23,7 +23,7 @@ function Germ(pos, r, c) {
 
 //creates new germ when clicked
   this.split = function() {
-    var germ = new Germ(this.pos, this.r/2, this.c);
+    var germ = new Germ(this.pos, this.r / 1.5, this.c);
     return germ;
   };
   //circles can move around screen
@@ -41,5 +41,10 @@ function Germ(pos, r, c) {
     fill(this.c);
     //pos is the vector
     ellipse(this.pos.x, this.pos.y, this.r, this.r);
+    ellipse(this.pos.x, this.pos.y, this.r*.02, this.r);
+    ellipse(this.pos.x, this.pos.y, this.r, this.r * .02);
+    ellipse(this.pos.y, this.pos.x, 13, 15);
+    strokeWeight(0.02);
+
   };
 }

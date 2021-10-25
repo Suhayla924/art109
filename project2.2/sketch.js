@@ -2,7 +2,7 @@
 var germs = [];
 
 function setup() {
-  createCanvas(750, 700);
+  createCanvas(950, 1050);
   //"Germ" is the constructor function
   //"germ" a singular cell object
   germs.push(new Germ());
