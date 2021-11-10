@@ -9,7 +9,7 @@ body {
   display: block;
   padding: 20px;
   background: url(
-data:image/png;base64,iVBORw0KGgoAAAANSUhEUgAAAAUAAAAFCAYAAACNbyblAAAAMklEQVQYV2N8dvrxfwYk8Oz0EwZGZEGQgJSpDEIQJgDSBFYJE4CrPDPt+H+QFhgASQAAS1MjDyLYWWEAAAAASUVORK5CYII=
+data:image/png;base64,iVBORw0KGgoAAAANSUhEUgAAAAoAAAAICAYAAADA+m62AAAAJ0lEQVQYlWNgQAdbDzZgiOFUhFcxuiRWxbhMQBEn5Cai3EyWYmIBAK5ZE50US+t+AAAAAElFTkSuQmCC
     )repeat;
 }
 
@@ -32,7 +32,7 @@ canvas {
 
 h1 {
   font-style: bold;
-  color: #2E9939;
+  color: #0BC2A5;
   max-width: 75%;
   text-align: center;
   margin: auto;
@@ -40,7 +40,7 @@ h1 {
 }
 
 h2 {
-  color: #2E5999;
+  color: #0B84C2;
   max-width: 75%;
   text-align: center;
   margin: auto;
@@ -64,5 +64,5 @@ p.mid {
 }
 
 a {
-  color: #735223;
+  color: #F10FA5;
 }
