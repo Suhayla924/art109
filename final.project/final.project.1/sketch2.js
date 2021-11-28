@@ -1,7 +1,7 @@
 let s = 'The quick brown fox jumped over the lazy dog.';
 
 function setup() {
-createCanvas(500, 500);
+  createCanvas(500, 500);
 }
 
 function draw() {
